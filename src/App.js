@@ -5,7 +5,7 @@ import Calcresult from "./component/Calcresult";
 
 class App extends Component {
   state = {
-    result: ""
+    result: "",
   };
 
   onClick = (button) => {
@@ -17,7 +17,7 @@ class App extends Component {
       this.backspace();
     } else {
       this.setState({
-        result: this.state.result + button
+        result: this.state.result + button,
       });
     }
   };
@@ -32,23 +32,23 @@ class App extends Component {
 
     try {
       this.setState({
-        result: (eval(checkResult) || "") + ""
+        result: (eval(checkResult) || "") + "",
       });
     } catch (e) {
       this.setState({
-        result: "error"
+        result: "error",
       });
     }
   };
 
   reset = () => {
     this.setState({
-      result: ""
+      result: "",
     });
   };
   backspace = () => {
     this.setState({
-      result: this.state.result.slice(0, -1)
+      result: this.state.result.slice(0, -1),
     });
   };
 
